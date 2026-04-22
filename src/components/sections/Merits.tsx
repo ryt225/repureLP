@@ -31,7 +31,7 @@ const merits = [
 export function Merits() {
   return (
     <section id="merits" className="bg-charcoal text-beige-lt">
-      <div className="mx-auto max-w-[520px] px-7 py-20 text-center">
+      <div className="mx-auto max-w-6xl px-6 py-20 text-center sm:px-8 sm:py-24 lg:px-12">
         <Reveal as="span" className="mb-[14px] inline-block font-latin text-[11px] uppercase tracking-[0.2em] text-beige">
           Why Re:pure&nbsp;bubble+
         </Reveal>

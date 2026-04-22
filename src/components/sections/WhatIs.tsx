@@ -4,7 +4,7 @@ import { SafeImage } from "@/components/ui/SafeImage";
 export function WhatIs() {
   return (
     <section id="what" className="bg-cream">
-      <div className="mx-auto max-w-[520px] px-7 py-20 text-center">
+      <div className="mx-auto max-w-6xl px-6 py-20 text-center sm:px-8 sm:py-24 lg:px-12">
         <Reveal as="span" className="mb-[14px] inline-block font-latin text-[11px] uppercase tracking-[0.2em] text-beige-dk">
           What is Re:pure&nbsp;bubble+
         </Reveal>
@@ -30,10 +30,10 @@ export function WhatIs() {
           />
         </Reveal>
 
-        <Reveal delay={2} className="mx-auto mb-8 w-full max-w-[720px]">
+        <Reveal delay={2} className="mx-auto mb-8 w-full max-w-4xl">
           <figure className="m-0">
             <SafeImage
-              src="/assets/keyvisual.jpg"
+              src="/assets/keyvisual.png"
               alt="Re:pure bubble+ 塩素除去とウルトラファインバブルで、やさしい水をペットに"
               className="block h-auto w-full rounded-[10px] shadow-[0_8px_28px_rgba(58,54,48,0.08)]"
             />
@@ -43,9 +43,9 @@ export function WhatIs() {
           </figure>
         </Reveal>
 
-        <Reveal delay={3} className="mx-auto mb-8 w-full max-w-[480px]">
+        <Reveal delay={3} className="mx-auto mb-8 w-full max-w-4xl">
           <SafeImage
-            src="/assets/install-image.png"
+            src="/assets/settiimage.png"
             alt="Re:pure bubble+ 設置イメージ"
             className="mx-auto block h-auto w-full"
           />

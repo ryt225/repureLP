@@ -18,7 +18,7 @@ export function Hero() {
       />
       {/* Hero image */}
       <SafeImage
-        src="/assets/hero-bathing.jpg"
+        src="/assets/hi-ro-.jpg"
         alt="シャンプー中の子犬"
         loading="eager"
         className="absolute inset-0 z-[1] h-full w-full object-cover"
@@ -88,7 +88,7 @@ export function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-[3] max-w-[520px] px-7 pb-16">
+      <div className="relative z-[3] mx-auto w-full max-w-6xl px-6 pb-16 sm:px-8 sm:pb-20 lg:px-12">
         <span
           className="anim-fade-up mb-[22px] block font-latin text-[11px] uppercase tracking-[0.22em] text-beige-dk"
           style={{ animationDelay: "0.3s", animationDuration: "0.8s" }}
