@@ -26,7 +26,7 @@ const concerns = [
 export function Empathy() {
   return (
     <section id="empathy" className="border-t border-[var(--line-soft)] bg-white">
-      <div className="mx-auto max-w-[520px] px-7 py-[72px]">
+      <div className="mx-auto max-w-6xl px-6 py-[72px] sm:px-8 sm:py-24 lg:px-12">
         <Reveal as="span" className="mb-[14px] inline-block font-latin text-[11px] uppercase tracking-[0.2em] text-beige-dk">
           For Salon Owners
         </Reveal>

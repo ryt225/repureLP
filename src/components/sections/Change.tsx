@@ -71,7 +71,7 @@ const rows: { before: React.ReactNode; after: React.ReactNode }[] = [
 export function Change() {
   return (
     <section id="change" className="bg-white">
-      <div className="mx-auto max-w-[520px] px-7 py-20 text-center">
+      <div className="mx-auto max-w-6xl px-6 py-20 text-center sm:px-8 sm:py-24 lg:px-12">
         <Reveal as="span" className="mb-[14px] inline-block font-latin text-[11px] uppercase tracking-[0.2em] text-beige-dk">
           Salon Change
         </Reveal>
@@ -82,9 +82,9 @@ export function Change() {
           サロンの変化
         </Reveal>
 
-        <Reveal className="mx-auto mb-7 w-full max-w-[480px]">
+        <Reveal className="mx-auto mb-8 w-full max-w-4xl">
           <SafeImage
-            src="/assets/graph.png"
+            src="/assets/graf.png"
             alt="水道水と塩素除去水の比較グラフ"
             className="mx-auto block h-auto w-full"
           />

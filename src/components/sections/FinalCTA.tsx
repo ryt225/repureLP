@@ -25,10 +25,10 @@ export function FinalCTA() {
         }}
       />
 
-      <div className="relative z-[1] mx-auto max-w-[520px] px-7 py-20">
+      <div className="relative z-[1] mx-auto max-w-6xl px-6 py-20 sm:px-8 sm:py-24 lg:px-12">
         <Reveal className="mx-auto mb-9 w-full max-w-[340px]">
           <SafeImage
-            src="/assets/bonding.jpg"
+            src="/assets/lp_bottom.jpg"
             alt="ふんわり仕上がったワンちゃんと飼い主"
             className="mx-auto block w-full rounded-lg object-cover shadow-[0_10px_40px_rgba(0,0,0,.35)]"
             style={{ aspectRatio: "3 / 4" }}
