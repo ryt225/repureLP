@@ -1,26 +1,111 @@
 @import "tailwindcss";
 
+/* ─── Design Tokens (Beige × Light Gray) ─── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --cream: #faf7f2;
+  --beige: #e8dfd0;
+  --beige-lt: #f2ede3;
+  --beige-dk: #8a7e6b;
+  --gray: #d8d5ce;
+  --gray-lt: #eeebe5;
+  --gray-md: #b8b3a8;
+  --charcoal: #3a3630;
+  --mid: #7a7368;
+  --white: #ffffff;
+  --line: rgba(138, 126, 107, 0.22);
+  --line-soft: rgba(138, 126, 107, 0.12);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-cream: var(--cream);
+  --color-beige: var(--beige);
+  --color-beige-lt: var(--beige-lt);
+  --color-beige-dk: var(--beige-dk);
+  --color-gray-warm: var(--gray);
+  --color-gray-lt: var(--gray-lt);
+  --color-gray-md: var(--gray-md);
+  --color-charcoal: var(--charcoal);
+  --color-mid: var(--mid);
+
+  --font-serif: var(--font-noto-serif-jp), "Noto Serif JP", serif;
+  --font-sans: var(--font-noto-sans-jp), "Noto Sans JP", sans-serif;
+  --font-latin: var(--font-cormorant), "Cormorant Garamond", serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-noto-sans-jp), "Noto Sans JP", sans-serif;
+  background: var(--cream);
+  color: var(--charcoal);
+  line-height: 1.85;
+  font-size: 15px;
+  overflow-x: hidden;
+}
+
+/* ─── Reveal Animation ─── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-d1 { transition-delay: 0.1s; }
+.reveal-d2 { transition-delay: 0.2s; }
+.reveal-d3 { transition-delay: 0.3s; }
+.reveal-d4 { transition-delay: 0.4s; }
+
+img.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+html.no-js .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+/* ─── Hero animations ─── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.anim-fade-up {
+  opacity: 0;
+  animation: fadeUp 0.9s forwards;
+}
+
+@keyframes ripple {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%      { transform: scale(1.06); opacity: 0.6; }
+}
+@keyframes floatUp {
+  0%   { transform: translateY(0); opacity: 0; }
+  20%  { opacity: 0.7; }
+  80%  { opacity: 0.5; }
+  100% { transform: translateY(-120px); opacity: 0; }
+}
+.anim-ripple {
+  animation: ripple 4s ease-in-out infinite;
+}
+.anim-float-up {
+  animation: floatUp 7s ease-in-out infinite;
 }
